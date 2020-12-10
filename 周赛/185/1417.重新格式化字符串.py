@@ -31,6 +31,10 @@
 1 <= s.length <= 500
 s 仅由小写英文字母和/或数字组成。
 '''
+# >>> sys.getsizeof('aaaaaaaaaa')
+# 59
+# >>> sys.getsizeof(list('aaaaaaaaaa'))
+# 200
 class Solution():
     def reformat(self, s:str) -> str:
         letter = ''
