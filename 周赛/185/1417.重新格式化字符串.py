@@ -33,14 +33,14 @@ s 仅由小写英文字母和/或数字组成。
 '''
 class Solution():
     def reformat(self, s:str) -> str:
-        letter = []
-        num = []
+        letter = ''
+        num = ''
         r = ''
         for i in s:
             if 48 <= ord(i) <= 57:
-                num.append(i)
+                num += i
             if 97 <= ord(i) <= 122:
-                letter.append(i)
+                letter += i
         if abs(len(letter)-len(num)) > 1:
             return r
         else:
@@ -51,7 +51,7 @@ class Solution():
                 r += num[-1]
             if len(letter) > len(num):
                r = letter[-1] + r
-            return r
+            return r        
 
 s = Solution()
 a = "a0b1c2"
